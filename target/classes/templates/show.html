@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://wwww.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table border="1" align="center">
+    <tr>
+        <td colspan="6">
+            <a href="/t_room/addShow">添加</a>
+        </td>
+    </tr>
+
+    <tr>
+        <td>序号</td>
+        <td>客房编号</td>
+        <td>客房状态</td>
+        <td>客房类型</td>
+        <td>客房电话</td>
+        <td>备注</td>
+
+
+    </tr>
+    <tr th:each="a:${all}">
+
+        <td th:text="${a.roomid}">序号</td>
+        <td th:text="${a.roomno}">客房编号</td>
+        <td th:text="${a.roomstatus}">客房状态</td>
+        <td th:text="${a.typename}">客房类型</td>
+        <td th:text="${a.roometel}">客房电话</td>
+        <td th:text="${a.remark}">备注</td>
+
+
+    </tr>
+</table>
+
+</body>
+</html>

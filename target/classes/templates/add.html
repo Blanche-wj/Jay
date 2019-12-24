@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://wwww.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="/t_room/add" method="post">
+    <table border="1" align="center">
+
+        
+        <tr>
+            <td>客房编号</td>
+            <td>
+                <input type="text" name="roomno" id="roomno">
+            </td>
+        </tr>
+        <tr>
+            <td>客房状态</td>
+            <td>
+                <input type="text" name="roomstatus" id="roomstatus">
+            </td>
+        </tr>
+        <tr>
+            <td>客房类型</td>
+            <td>
+                <select name="roomtype" >
+                    <option th:each="q:${query}" th:value="${q.typeid}" th:text="${q.typename}"></option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>客房电话</td>
+            <td>
+                <input type="text" name="roometel" id="roometel">
+            </td>
+        </tr>
+
+        <tr>
+            <td>备注</td>
+            <td>
+                <input type="text" name="remark" id="remark">
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="6">
+                <input type="submit" value="提交">
+            </td>
+        </tr>
+
+    </table>
+</form>
+
+</body>
+</html>
